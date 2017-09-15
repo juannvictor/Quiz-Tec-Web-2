@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<link rel="stylesheet" href="quiz.css" type="text/css">
 	<meta charset="utf-8">
-	<title>Segredos do cinema</title>
+	<title>Os Segredos do Cinema</title>
 	<script>
+		function clickStart(){
+			window.open("perguntas.html");
+		}
+		function clickAbout(){
+			alert("Você se considera um cinéfilo de verdade? Faça esse teste de 10 perguntas que testarão o seu conhecimento sobre a sétima arte!")
+		}
 		
 	</script>
 </head>
 <body>
 <section>
 	<img src="capa.png" id="capa">
-	<p>O quizz que testa seus conhecimentos sobre a sétima arte.</p>
+	<h2 id="legenda">O quiz que testa seus conhecimentos sobre a sétima arte.</h2>
+	<form>
+		<button id="botao1" class="botão" value="botãoIniciar" onclick="clickStart()">Começar o Quiz</button>
+		<button id="botão2" class="botão" value="botãoSobre" onclick="clickAbout()">Sobre o quiz</button>
+	</form>
 </section>
+<footer>
+	<p id="textofooter">Todos os direitos reservados a © Juan Victor Dutra Juan - 2017</p>
+</footer>
 </body>
 </html>
