@@ -1,7 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<link rel="stylesheet" href="quiz.css" type="text/css">
+	<style type="text/css">
+p.clear{
+	clear: both;
+}
+html{
+	font-family: Verdana;
+}
+#capa{
+	position: relative;
+	display: block;
+	left: auto;
+	margin: auto;
+	width: 30%;
+}
+#legenda{
+	font-family: Verdana;
+	border:none;
+	position: relative;
+	margin: 0px;
+	color: grey;
+	left: 28%;
+	width: 50%;
+}
+
+body{
+	background-color: beige
+}
+#capa{
+	width: 1400px;
+	position: 
+}
+
+#main{
+	width: 80%
+	max-width: 1000px;
+	border: 1px gray solid
+	padding: 10px;
+	
+}
+button.botao{
+	font-family: Verdana;
+	border: none;
+	position: relative;
+	margin: auto;
+	top: auto;
+	left: 25%;
+	width: 50%;
+
+}
+button:hover#botao1{
+	background-color: orange;
+}
+button:hover#botao2{
+	background-color: green;
+}
+
+footer{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0px;
+	border: 0px;
+	background-color: rgb(232,148,83);
+	text-align: center;
+	font-family: Verdana;
+}
+
+
+	</style>
 	<meta charset="utf-8">
 	<title>Os Segredos do Cinema</title>
 	<script>
@@ -19,8 +88,8 @@
 	<img src="capa.png" id="capa">
 	<h2 id="legenda">O quiz que testa seus conhecimentos sobre a sétima arte.</h2>
 	<form>
-		<button id="botao1" class="botão" value="botãoIniciar" onclick="clickStart()">Começar o Quiz</button>
-		<button id="botão2" class="botão" value="botãoSobre" onclick="clickAbout()">Sobre o quiz</button>
+		<button id="botao1" class="botao" value="botaoIniciar" onclick="clickStart()">Começar o Quiz</button>
+		<button id="botao2" class="botao" value="botaoSobre" onclick="clickAbout()">Sobre o quiz</button>
 	</form>
 </section>
 <footer>
