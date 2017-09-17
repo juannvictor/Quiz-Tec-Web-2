@@ -30,31 +30,31 @@ body{
 }
 #capa{
 	width: 1400px;
-	position: 
+	position: relative;
 }
 
 #main{
 	width: 80%
 	max-width: 1000px;
-	border: 1px gray solid
-	padding: 10px;
 	
 }
-button.botao{
-	font-family: Verdana;
-	border: none;
-	position: relative;
-	margin: auto;
-	top: auto;
-	left: 25%;
-	width: 50%;
-
+#botao1{
+        border: none;
+        position: relative;
+        margin:0;
+        top: auto;
+        left: 35%;
+        width: 140px;
+        padding: 0;
 }
-button:hover#botao1{
-	background-color: orange;
-}
-button:hover#botao2{
-	background-color: green;
+#botao2{
+        border: none;
+        position: relative;
+        margin: 0;
+        top: auto;
+        left: 45%;
+        width: 120px;
+        padding: 0;
 }
 
 footer{
@@ -88,12 +88,13 @@ footer{
 	<img src="capa.png" id="capa">
 	<h2 id="legenda">O quiz que testa seus conhecimentos sobre a sétima arte.</h2>
 	<form>
-		<button id="botao1" class="botao" value="botaoIniciar" onclick="clickStart()">Começar o Quiz</button>
-		<button id="botao2" class="botao" value="botaoSobre" onclick="clickAbout()">Sobre o quiz</button>
+		<button value="botaoIniciar" onclick="clickStart()" id="botao1"><img src="botaoiniciar3.png" ></button>
+		<button value="botaoSobre" onclick="clickAbout()"  id="botao2"><img src="sobre3.png"></button>
 	</form>
 </section>
+<br>
 <footer>
-	<p id="textofooter">Todos os direitos reservados a © Juan Victor Dutra Juan - 2017</p>
+	<p id="textofooter">Todos os direitos reservados © Juan Victor Dutra Juan - 2017</p>
 </footer>
 </body>
 </html>
