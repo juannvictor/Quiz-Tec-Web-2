@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="perguntas.css">
 	<script>
 		var pessoa = prompt("Digite o seu nome para começar: ");
-		while(pessoa == null || pessoa == false){
+		while(pessoa == null && pessoa == false){
 			alert("Você precisa preencher seu nome para começar o quiz.");
 			var pessoa = prompt("Digite o seu nome para começar: ")
 		}
@@ -16,6 +16,12 @@
 			var q2 = document.getElementById('opção_correta2').checked;
 			var q3 = document.getElementById('opção_correta3').checked;
 			var q4 = document.getElementById('opção_correta4').checked;
+                        var q5 = document.getElementById('opção_correta5').checked;
+                        var q6 = document.getElementById('opção_correta6').checked;
+                        var q7 = document.getElementById('opção_correta7').checked;
+                        var q8 = document.getElementById('opção_correta8').checked;
+                        var q9 = document.getElementById('opção_correta9').checked;
+                        var q10 = document.getElementById('opção_correta10').checked;
 
 			var erradas = ""
 
@@ -48,35 +54,144 @@
 				p4 = "Pergunta 4 - Resposta: Cidade de Deus. \n"
 				erradas += p4
 			}
+                        if (q5 == true){
+                                cont++;
+                        }
+                        else{
+                                p5 = "Pergunta 5 - Resposta: R2D2 e C3PO. \n"
+                                erradas += p5;
+                        }
 
+                        if (q6 == true){
+                                cont++;
+                        }
+                        else{
+                                p6 = "Pergunta 6 - Resposta: L'Arrivée d'un Train à La Ciotat. \n"
+                                erradas += p6;
+                        }
+                        if (q7 == true){
+                                cont++;
+                        }
+                        else{
+                                p7= "Pergunta 7 - Resposta: Click. \n"
+                                erradas += p7
+                        }
+                        if (q8 == true){
+                                cont++;
+                        }
+                        else{
+                                p8 = "Pergunta 8 - Resposta: Vermelha e Azul. \n"
+                                erradas += p8
+                        }
+                        if (q9 == true){
+                                cont++;
+                        }
+                        else{
+                                p9 = "Pergunta 9 - Resposta: Os Senhor dos Aneis: O Retorno do Rei (2003). \n"
+                                erradas += p9;
+                        }
 
-		}
-
-		function Finalizar(){
-			var Display = ""
-			var total = (cont/4)*100
-			if (total == 100){
-				Display = "Texto para mostrar q vc acertou todas."
-			}
-			else if (total >= 80 && total < 100){
-				Display = "Texto para mostrar q vc acertou quase todas."
-			}
-			else if (total >= 50 && total < 80){
-				Display = "Texto para mostrar q vc acertou metade."
-			}
-			else if (total >= 30 && total < 50){
-				Display = "Texto para mostrar q vc foi razoavel."
-			}
-			else{
-				Display = "Texto para mostrar q não acertou nenhuma."
-			}
+                        if (q10 == true){
+                                cont++;
+                        }
+                        else{
+                                p10 = "Pergunta 10 - Resposta: Bollywood. \n"
+                                erradas += p10;
+                        }
+                        
+                        var Display = ""
+                        if (cont == 10){
+                                alert("Parabéns " + pessoa + ", você acertou todas as perguntas! Você é realmente um verdadeiro cinéfilo!")
+                        }
+                        else if (cont >= 8 && cont < 100){
+                               alert("Parabéns" + pessoa + ", você acertou" + total + "% das perguntas, você é um grande apreciados da sétima arte, continue assim!\n" + "\n" + "Questões erradas: \n" + erradas)
+                        }
+                        else if (cont >= 5 && cont < 8){
+                                alert("Parabéns" + pessoa + ", você acertou" + total + "% das perguntas, você parece conhecer algumas coisas básicas e clássicas de cinema, continue assim!\n" + "\n" + "Questões erradas: \n" + erradas);
+                        }
+                        else if (cont >= 3 && cont < 5){
+                                alert(pessoa + ", você acertou" + total + "% das perguntas, parece que você não conhece muito sobre a sétima arte, mas esta é uma ótima oportunidade para começar a se interessar!\n" + "\n" + "Questões erradas: \n" + erradas);
+                        }
+                        else{
+                                alert(pessoa + ", você não acertou nehuma pergunta,eu acho que você deveria ir ver algum filme.....")
+                        }
+                        window.close("perguntas.html")
 		}
 	</script>
+        <style type="text/css">
+                *{
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: inherit;
+                }
+                html{
+                        font-family: "Verdana";
+                }
+                p.clear{
+                        clear: both;
+                }
+                #capa2{
+                        position: relative;
+                        display: block;
+                        left: auto;
+                        margin: auto;
+                        width: 30%;
+                }
+                article{
+                        width: 550px;
+                        padding: 10px;
+                        margin: 30px auto;
+                        border: 1px solid grey;
+                        top: 250px;
+                        left: 0;
+                        right: 0;
+                        box-shadow: 10px 10px 15px grey;
+                        background-color: rgb(255,203,139);
+                }
+                body{
+                        background-color: beige;
+                }
+                .questão{
+                        font-style: bold;
+                }
+                .gifs{
+                        height: 210px;
+                        width: 500px;
+                }
+                p{
+                        display: block;
+                        -webkit-margin-before: 1em;
+                        -webkit-margin-after: 1em;
+                        -webkit-margin-start: 0px;
+                        -webkit-margin-end: 0px;
+                }
+                footer{
+                        position: relative;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        padding: 0px;
+                        background-color: rgb(232,148,83);
+                        border: 0px;
+                        text-align: center;
+                        font-family: "Verdana";
+                }
+             
+                .botao{
+        border: none;
+        position: relative;
+        margin: 0;
+        top: auto;
+        left: 45%;
+        width: 10%;
+        padding: 0;
+}
+        </style>
 </head>
 <body name="quiz">
 	<img src="capa.png" id="capa2">
 	<article>
-		<p>Questão 1</p>
+		<p class="questão"><b>Questão 1 - Shyamalan</b></p> <img src="shyamalan.gif" class="gifs">
 		<p class="enunciado">Shyamalan, diretor, tem um catálogo de filmes bem peculiares, surpreendentes e únicos como Fragmentado e O Sexto Sentido,
 ele se consolidou no mundo do cinema com uma técnica de direção que todos os seus filmes carregam, qual o nome dessa técnica?</p>
         <p>
@@ -107,7 +222,7 @@ ele se consolidou no mundo do cinema com uma técnica de direção que todos os 
 	</article>
 
 	<article>
-		<p>Questão 2</p>
+		<p class="questão"><b>Questão 2 - Pulp Fiction</b></p> <img src="pulpfiction.gif" class="gifs">
 		<p class="enunciado">Em Pulp Fiction, de Quentin Tarantino, Vincent Vega (John Travolta) e Jules (Samuel L. Jackson) começam uma conversa sobre hambúrgueres com
 Brett, que esta no banco traseiro, até que Jules pergunta a Brett como que o Quarteirão com Queijo se chama na França, qual o nome do lanche em 
 francês e porque ele tem esse nome?</p>
@@ -139,7 +254,7 @@ francês e porque ele tem esse nome?</p>
 	</article>
 
 	<article>
-		<p>Questão 3</p>
+		<p class="questão"><b>Questão 3 - Michael Bay</b></p> <img src="transformers.gif" class="gifs">
 		<p class="enunciado">Michael Bay é um famoso diretor que ficou mundialmente conhecido no mercado de Blockbusters a partir de suas produções "espetáculos", explosões
 e efeitos especiais, qual desses filmes não faz parte de sua franquia?</p>
         <p>
@@ -170,7 +285,7 @@ e efeitos especiais, qual desses filmes não faz parte de sua franquia?</p>
 	</article>
 
 	<article>
-		<p>Questão 4</p>
+		<p class="questão"><b>Questão 4 - Cinema Brasileiro</b></p> <img src="cidade.gif" class="gifs">
 		<p class="enunciado">Por incrível que pareça, o cenário cinematográfico brasileiro é repleto de arte e filmes renomados, com alguns até sendo indicados ao Oscar.
 Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         <p>
@@ -185,12 +300,12 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </p>
         <p>
         	<b>c)</b>
-        	<input type="radio" name="alternativa3" value="opção_c">
+        	<input type="radio" name="alternativa3" value="opção_c" id="opção_correta4">
         	Cidade de Deus
         </p>
         <p>
         	<b>d)</b>
-        	<input type="radio" name="alternativa4" value="opção_d" id="opção_correta4">
+        	<input type="radio" name="alternativa4" value="opção_d">
         	Minha Mãe é Uma Peça
         </p>
         <p>
@@ -201,7 +316,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
 	</article>
 
         <article>
-                <p>Questão 5</p>
+                <p class="questão"><b>Questão 5 - Star Wars</b></p> <img src="starwars.gif" class="gifs">
                 <p class="enunciado">Em Star Wars, Luke Skywalker esta sempre acompanhado de 2 companheiros robóticos, quais os seus respectivos nomes? </p>
         <p>
                 <b>a)</b>
@@ -231,7 +346,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </article>
 
         <article>
-                <p>Questão 6</p>
+                <p class="questão"><b>Questão 6 - História do Cinema</b></p> <img src="filme.gif" class="gifs">
                 <p class="enunciado">Em 28 de Dezembro de 1895, os Irmãos Lumiere iam mudar a história do mundo com o primeiro filme ja feito, qual era o nome desse filme? </p>
         <p>
                 <b>a)</b>
@@ -261,8 +376,8 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </article>
 
         <article>
-                <p>Questão 7</p>
-                <p class="enunciado">Jim Carrey é um dos atores mais amados de Holywood, porém, o que muita gente não sabe, é que alem de um grande repertório de comédia, ele também tem um enorme repertório de filmes com muita carga dramática, qual desses filmes não foi estrelado por ele? </p>
+                <p class="questão"><b>Questão 7 - Jim Carrey </b></p> <img src="truman.gif" class="gifs">
+                <p class="enunciado">Jim Carrey é um dos atores mais amados de Hollywood, porém, o que muita gente não sabe, é que alem de um grande repertório de comédia, ele também tem um enorme repertório de filmes com muita carga dramática, qual desses filmes não foi estrelado por ele? </p>
         <p>
                 <b>a)</b>
                 <input type="radio" name="alternativa1" value="opção_a">
@@ -291,7 +406,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </article>
 
         <article>
-                <p>Questão 8</p>
+                <p class="questão"><b>Questão 8 - Matrix</b></p> <img src="morpheus.gif" class="gifs">
                 <p class="enunciado">Em Matrix, Morpheus oferece a Neo duas pílulas; uma que vai levá-lo a "toca do coelho", e a outra que vai leva-lo a sua vida normal de novo, quais as cores das duas pílulas, respectivamente?</p>
         <p>
                 <b>a)</b>
@@ -321,7 +436,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </article>
 
         <article>
-                <p>Questão 9</p>
+                <p class="questão"><b>Questão 9 - Oscar</b></p> <img src="oscar.gif" class="gifs">
                 <p class="enunciado">O Oscar é, sem dúvidas, a premiação mais famosa do cinema, nomeando grandes filmes a cada ano, qual foi o filme que mais levou estatuetas neste evento? </p>
         <p>
                 <b>a)</b>
@@ -351,12 +466,12 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </article>
 
         <article>
-                <p>Questão 10</p>
+                <p class="questão"><b>Questão 10 - Cinema Indiano</b></p>  <img src="bollywood.gif" class="gifs">
                 <p class="enunciado">A Índia é um dos países mais populosos do mundo, somando mais de 1 bilhão de habitantes, ela é tão grande e tão influente que tem sua própria indústria cinematográfica, qual o nome dela? </p>
         <p>
                 <b>a)</b>
                 <input type="radio" name="alternativa1" value="opção_a" id="opção_correta10">
-                Bolywood 
+                Bollywood 
         </p>
         <p>
                 <b>b)</b>
@@ -379,5 +494,5 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 Mohawood 
         </p>
         </article>
-</body>
-</html>
+        <form>
+                <buttom value="botaoterminar" onclick="somarResultado()"><img src="resultado3.png" class="botao"></buttom>
