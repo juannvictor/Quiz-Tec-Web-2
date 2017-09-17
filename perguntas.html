@@ -98,12 +98,14 @@
                                 p10 = "Pergunta 10 - Resposta: Bollywood. \n"
                                 erradas += p10;
                         }
+
                         
-                        var Display = ""
-                        if (cont == 10){
+                        alert("Parabéns " + pessoa + " você acertou " + cont + " questões.\n" + "\n" + "Questões erradas: \n" + erradas);
+                        
+			/*if (cont == 10){
                                 alert("Parabéns " + pessoa + ", você acertou todas as perguntas! Você é realmente um verdadeiro cinéfilo!")
                         }
-                        else if (cont >= 8 && cont < 100){
+                        else if (cont >= 8 && cont < 10){
                                alert("Parabéns" + pessoa + ", você acertou" + total + "% das perguntas, você é um grande apreciados da sétima arte, continue assim!\n" + "\n" + "Questões erradas: \n" + erradas)
                         }
                         else if (cont >= 5 && cont < 8){
@@ -113,8 +115,9 @@
                                 alert(pessoa + ", você acertou" + total + "% das perguntas, parece que você não conhece muito sobre a sétima arte, mas esta é uma ótima oportunidade para começar a se interessar!\n" + "\n" + "Questões erradas: \n" + erradas);
                         }
                         else{
-                                alert(pessoa + ", você não acertou nehuma pergunta,eu acho que você deveria ir ver algum filme.....")
-                        }
+                                alert(pessoa + ", você não acertou nehuma pergunta, eu acho que você deveria começar a assistir mais filmes.....")
+                        } /*/
+			
                         window.close("perguntas.html")
 		}
 	</script>
