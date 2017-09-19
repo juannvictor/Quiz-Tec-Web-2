@@ -12,24 +12,24 @@
 		}
 		function somarResultado(){
 			var cont = 0;
-			var q1 = document.getElementById('opção_correta1').checked;
-			var q2 = document.getElementById('opção_correta2').checked;
-			var q3 = document.getElementById('opção_correta3').checked;
-			var q4 = document.getElementById('opção_correta4').checked;
-                        var q5 = document.getElementById('opção_correta5').checked;
-                        var q6 = document.getElementById('opção_correta6').checked;
-                        var q7 = document.getElementById('opção_correta7').checked;
-                        var q8 = document.getElementById('opção_correta8').checked;
-                        var q9 = document.getElementById('opção_correta9').checked;
-                        var q10 = document.getElementById('opção_correta10').checked;
+			var q1 = document.getElementById('opcao_correta1').checked;
+			var q2 = document.getElementById('opcao_correta2').checked;
+			var q3 = document.getElementById('opcao_correta3').checked;
+			var q4 = document.getElementById('opcao_correta4').checked;
+            var q5 = document.getElementById('opcao_correta5').checked;
+            var q6 = document.getElementById('opcao_correta6').checked;
+            var q7 = document.getElementById('opcao_correta7').checked;
+            var q8 = document.getElementById('opcao_correta8').checked;
+            var q9 = document.getElementById('opcao_correta9').checked;
+            var q10 = document.getElementById('opcao_correta10').checked;
 
-			var erradas = ""
+			var erradas = "";
 
 			if (q1 == true){
 				cont++;
 			}
 			else{
-				p1 = "Pergunta 1 - Resposta: Plot twist. \n"
+				var p1 = "Pergunta 1 - Resposta: Plot twist. \n";
 				erradas += p1;
 			}
 
@@ -37,70 +37,70 @@
 				cont++;
 			}
 			else{
-				p2 = "Pergunta 2 - Resposta: Royale with cheese, por conta de seu sistema métrico. \n"
+                var p2 = "Pergunta 2 - Resposta: Royale with cheese, por conta de seu sistema métrico. \n";
 				erradas += p2;
 			}
 			if (q3 == true){
 				cont++;
 			}
 			else{
-				p3 = "Pergunta 3 - Resposta: Círculo de Fogo. \n"
-				erradas += p3
+				var p3 = "Pergunta 3 - Resposta: Círculo de Fogo. \n";
+				erradas += p3;
 			}
 			if (q4 == true){
 				cont++;
 			}
 			else{
-				p4 = "Pergunta 4 - Resposta: Cidade de Deus. \n"
-				erradas += p4
+				var p4 = "Pergunta 4 - Resposta: Cidade de Deus. \n";
+				erradas += p4;
 			}
-                        if (q5 == true){
-                                cont++;
-                        }
-                        else{
-                                p5 = "Pergunta 5 - Resposta: R2D2 e C3PO. \n"
-                                erradas += p5;
-                        }
+            if (q5 == true){
+                    cont++;
+            }
+            else{
+                    p5 = "Pergunta 5 - Resposta: R2D2 e C3PO. \n";
+                    erradas += p5;
+            }
 
-                        if (q6 == true){
-                                cont++;
-                        }
-                        else{
-                                p6 = "Pergunta 6 - Resposta: L'Arrivée d'un Train à La Ciotat. \n"
-                                erradas += p6;
-                        }
-                        if (q7 == true){
-                                cont++;
-                        }
-                        else{
-                                p7= "Pergunta 7 - Resposta: Click. \n"
-                                erradas += p7
-                        }
-                        if (q8 == true){
-                                cont++;
-                        }
-                        else{
-                                p8 = "Pergunta 8 - Resposta: Vermelha e Azul. \n"
-                                erradas += p8
-                        }
-                        if (q9 == true){
-                                cont++;
-                        }
-                        else{
-                                p9 = "Pergunta 9 - Resposta: Os Senhor dos Aneis: O Retorno do Rei (2003). \n"
-                                erradas += p9;
-                        }
+            if (q6 == true){
+                    cont++;
+            }
+            else{
+                    p6 = "Pergunta 6 - Resposta: L'Arrivée d'un Train à La Ciotat. \n";
+                    erradas += p6;
+            }
+            if (q7 == true){
+                    cont++;
+            }
+            else{
+                    p7= "Pergunta 7 - Resposta: Click. \n";
+                    erradas += p7;
+            }
+            if (q8 == true){
+                    cont++;
+            }
+            else{
+                    p8 = "Pergunta 8 - Resposta: Vermelha e Azul. \n";
+                    erradas += p8;
+            }
+            if (q9 == true){
+                    cont++;
+            }
+            else{
+                    p9 = "Pergunta 9 - Resposta: Os Senhor dos Aneis: O Retorno do Rei (2003). \n";
+                    erradas += p9;
+            }
 
-                        if (q10 == true){
-                                cont++;
-                        }
-                        else{
-                                p10 = "Pergunta 10 - Resposta: Bollywood. \n"
-                                erradas += p10;
-                        }
+            if (q10 == true){
+                    cont++;
+            }
+            else{
+                    p10 = "Pergunta 10 - Resposta: Bollywood. \n";
+                    erradas += p10;
+            }
 
                         
-                        alert("Parabéns " + pessoa + " você acertou " + cont + " questões.\n" + "\n" + "Questões erradas: \n" + erradas);
+            alert("Parabéns " + pessoa + " você acertou " + cont.toString() + " questões.\n" + "\n" + "Questões erradas: \n" + erradas);
                         
 			/*if (cont == 10){
                                 alert("Parabéns " + pessoa + ", você acertou todas as perguntas! Você é realmente um verdadeiro cinéfilo!")
@@ -118,7 +118,7 @@
                                 alert(pessoa + ", você não acertou nehuma pergunta, eu acho que você deveria começar a assistir mais filmes.....")
                         } /*/
 			
-                        window.close("perguntas.html")
+            window.close("perguntas.html");
 		}
 	</script>
         <style type="text/css">
@@ -209,7 +209,7 @@ ele se consolidou no mundo do cinema com uma técnica de direção que todos os 
         </p>
         <p>
         	<b>c)</b>
-        	<input type="radio" name="alternativa3" value="opção_c" id="opção_correta1">
+        	<input type="radio" name="alternativa3" value="opção_c" id="opcao_correta1">
         	Plot twist
         </p>
         <p>
@@ -236,7 +236,7 @@ francês e porque ele tem esse nome?</p>
         </p>
         <p>
         	<b>b)</b>
-        	<input type="radio" name="alternativa2" value="opção_b" id="opção_correta2">
+        	<input type="radio" name="alternativa2" value="opção_b" id="opcao_correta2">
         	Royale with cheese, por conta de seu sistema métrico.
         </p>
         <p>
@@ -277,7 +277,7 @@ e efeitos especiais, qual desses filmes não faz parte de sua franquia?</p>
         </p>
         <p>
         	<b>d)</b>
-        	<input type="radio" name="alternativa4" value="opção_d" id="opção_correta3">
+        	<input type="radio" name="alternativa4" value="opção_d" id="opcao_correta3">
         	Círculo de Fogo
         </p>
         <p>
@@ -303,7 +303,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </p>
         <p>
         	<b>c)</b>
-        	<input type="radio" name="alternativa3" value="opção_c" id="opção_correta4">
+        	<input type="radio" name="alternativa3" value="opção_c" id="opcao_correta4">
         	Cidade de Deus
         </p>
         <p>
@@ -323,7 +323,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <p class="enunciado">Em Star Wars, Luke Skywalker esta sempre acompanhado de 2 companheiros robóticos, quais os seus respectivos nomes? </p>
         <p>
                 <b>a)</b>
-                <input type="radio" name="alternativa1" value="opção_a" id="opção_correta5">
+                <input type="radio" name="alternativa1" value="opção_a" id="opcao_correta5">
                 R2D2 e C3PO
         </p>
         <p>
@@ -351,6 +351,9 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         <article>
                 <p class="questão"><b>Questão 6 - História do Cinema</b></p> <img src="filme.gif" class="gifs">
                 <p class="enunciado">Em 28 de Dezembro de 1895, os Irmãos Lumiere iam mudar a história do mundo com o primeiro filme ja feito, qual era o nome desse filme? </p>
+        <form>
+            <label for="OpcaoA"><input type="radio" id="OpcaoA">Opção A</label>
+            </form>
         <p>
                 <b>a)</b>
                 <input type="radio" name="alternativa1" value="opção_a">
@@ -358,7 +361,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </p>
         <p>
                 <b>b)</b>
-                <input type="radio" name="alternativa2" value="opção_b"  id="opção_correta6">
+                <input type="radio" name="alternativa2" value="opção_b"  id="opcao_correta6">
                 L'Arrivée d'un Train à La Ciotat 
         </p>
         <p>
@@ -366,6 +369,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <input type="radio" name="alternativa3" value="opção_c">
                 La Llegada del Tren al Paraíso.
         </p>
+            
         <p>
                 <b>d)</b>
                 <input type="radio" name="alternativa4" value="opção_d">
@@ -398,7 +402,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </p>
         <p>
                 <b>d)</b>
-                <input type="radio" name="alternativa4" value="opção_d" id="opção_correta7">
+                <input type="radio" name="alternativa4" value="opção_d" id="opcao_correta7">
                 Click
         </p>
         <p>
@@ -428,7 +432,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </p>
         <p>
                 <b>d)</b>
-                <input type="radio" name="alternativa4" value="opção_d" id="opção_correta8">
+                <input type="radio" name="alternativa4" value="opção_d" id="opcao_correta8">
                 Vermelha e Azul
         </p>
         <p>
@@ -453,7 +457,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         </p>
         <p>
                 <b>c)</b>
-                <input type="radio" name="alternativa3" value="opção_c" id="opção_correta9">
+                <input type="radio" name="alternativa3" value="opção_c" id="opcao_correta9">
                 Os Senhor dos Aneis: O Retorno do Rei (2003)
         </p>
         <p>
@@ -473,7 +477,7 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <p class="enunciado">A Índia é um dos países mais populosos do mundo, somando mais de 1 bilhão de habitantes, ela é tão grande e tão influente que tem sua própria indústria cinematográfica, qual o nome dela? </p>
         <p>
                 <b>a)</b>
-                <input type="radio" name="alternativa1" value="opção_a" id="opção_correta10">
+                <input type="radio" name="alternativa1" value="opção_a" id="opcao_correta10">
                 Bollywood 
         </p>
         <p>
