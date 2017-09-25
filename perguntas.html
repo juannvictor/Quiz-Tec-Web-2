@@ -6,27 +6,28 @@
 	<link rel="stylesheet" type="text/css" href="perguntas.css">
 	<script>
 		var pessoa = prompt("Digite o seu nome para começar: ");
-		while(pessoa == null && pessoa == false){
+		while(pessoa == null || pessoa == false){
 			alert("Você precisa preencher seu nome para começar o quiz.");
 			var pessoa = prompt("Digite o seu nome para começar: ")
 		}
+        
 		function somarResultado(){
 			var cont = 0;
-			var q1 = document.getElementById("opcao_correta1").checked;
-			var q2 = document.getElementById("opcao_correta2").checked;
-			var q3 = document.getElementById("opcao_correta3").checked;
-			var q4 = document.getElementById("opcao_correta4").checked;
-            var q5 = document.getElementById("opcao_correta5").checked;
-            var q6 = document.getElementById("opcao_correta6").checked;
-            var q7 = document.getElementById("opcao_correta7").checked;
-            var q8 = document.getElementById("opcao_correta8").checked;
-            var q9 = document.getElementById("opcao_correta9").checked;
-            var q10 = document.getElementById("opcao_correta10").checked;
+			var q1 = document.getElementById("correta1").checked;
+			var q2 = document.getElementById("correta2").checked;
+			var q3 = document.getElementById("correta3").checked;
+			var q4 = document.getElementById("correta4").checked;
+			var q5 = document.getElementById("correta5").checked;
+			var q6 = document.getElementById("correta6").checked;
+			var q7 = document.getElementById("correta7").checked;
+			var q8 = document.getElementById("correta8").checked;
+			var q9 = document.getElementById("correta9").checked;
+			var q10 = document.getElementById("correta10").checked;
 
-			var erradas = "";
+			var erradas = ""
 
 			if (q1 == true){
-				return cont += 1;
+                cont++;
 			}
 			else{
 				var p1 = "Pergunta 1 - Resposta: Plot twist. \n";
@@ -34,28 +35,28 @@
 			}
 
 			if (q2 == true){
-				return cont += 1;
+                cont += 1;
 			}
 			else{
                 var p2 = "Pergunta 2 - Resposta: Royale with cheese, por conta de seu sistema métrico. \n";
 				erradas += p2;
 			}
 			if (q3 == true){
-				return cont++;
+                cont++;
 			}
 			else{
 				var p3 = "Pergunta 3 - Resposta: Círculo de Fogo. \n";
 				erradas += p3;
 			}
 			if (q4 == true){
-				return cont += 1;
+                cont += 1;
 			}
 			else{
 				var p4 = "Pergunta 4 - Resposta: Cidade de Deus. \n";
 				erradas += p4;
 			}
             if (q5 == true){
-                return cont += 1;
+                cont += 1;
             }
             else{
                 p5 = "Pergunta 5 - Resposta: R2D2 e C3PO. \n";
@@ -63,28 +64,28 @@
             }
 
             if (q6 == true){
-                return cont += 1;
+                cont += 1;
             }
             else{
                 p6 = "Pergunta 6 - Resposta: L'Arrivée d'un Train à La Ciotat. \n";
                 erradas += p6;
             }
             if (q7 == true){
-                return cont += 1;
+                cont += 1;
             }
             else{
                 p7= "Pergunta 7 - Resposta: Click. \n";
                 erradas += p7;
             }
             if (q8 == true){
-                return cont += 1;
+                cont += 1;
             }
             else{
                 p8 = "Pergunta 8 - Resposta: Vermelha e Azul. \n";
                 erradas += p8;
             }
             if (q9 == true){
-                return cont += 1;
+                cont += 1;
             }
             else{
                 p9 = "Pergunta 9 - Resposta: Os Senhor dos Aneis: O Retorno do Rei (2003). \n";
@@ -92,7 +93,7 @@
             }
 
             if (q10 == true){
-                return cont += 1;
+                cont += 1;
             }
             else{
                 p10 = "Pergunta 10 - Resposta: Bollywood. \n";
@@ -100,23 +101,7 @@
             }
 
                         
-            alert("Parabéns " + pessoa + " você acertou " + cont + " questões.\n" + "\n" + "Questões erradas: \n" + erradas);
-                        
-			/*if (cont == 10){
-                                alert("Parabéns " + pessoa + ", você acertou todas as perguntas! Você é realmente um verdadeiro cinéfilo!")
-                        }
-                        else if (cont >= 8 && cont < 10){
-                               alert("Parabéns" + pessoa + ", você acertou" + total + "% das perguntas, você é um grande apreciados da sétima arte, continue assim!\n" + "\n" + "Questões erradas: \n" + erradas)
-                        }
-                        else if (cont >= 5 && cont < 8){
-                                alert("Parabéns" + pessoa + ", você acertou" + total + "% das perguntas, você parece conhecer algumas coisas básicas e clássicas de cinema, continue assim!\n" + "\n" + "Questões erradas: \n" + erradas);
-                        }
-                        else if (cont >= 3 && cont < 5){
-                                alert(pessoa + ", você acertou" + total + "% das perguntas, parece que você não conhece muito sobre a sétima arte, mas esta é uma ótima oportunidade para começar a se interessar!\n" + "\n" + "Questões erradas: \n" + erradas);
-                        }
-                        else{
-                                alert(pessoa + ", você não acertou nehuma pergunta, eu acho que você deveria começar a assistir mais filmes.....")
-                        } /*/
+            alert("Parabéns " + pessoa + " você acertou " + cont + " questões.\n" + "\n" + "Questões erradas: \n" + erradas);                  
 			
             window.close("perguntas.html");
 		}
@@ -198,11 +183,11 @@
 		<p class="enunciado">Shyamalan, diretor, tem um catálogo de filmes bem peculiares, surpreendentes e únicos como Fragmentado e O Sexto Sentido,
 ele se consolidou no mundo do cinema com uma técnica de direção que todos os seus filmes carregam, qual o nome dessa técnica?</p>
         <form>
-            <input type="radio" name="questao1" id="opcao_a"><b>a)</b> Serial Killer<br>
-            <input type="radio" name="questao1" id="opcao_b"><b>b)</b> Jornada do Herói<br>
-            <input type="radio" name="questao1" id="opcao_correta1"><b>c)</b> Plot twist<br>
-            <input type="radio" name="questao1" id="opcao_d"><b>d)</b> Plano Sequência<br>
-            <input type="radio" name="questao1" id="opcao_e"><b>e)</b> Amor clássico<br>
+            <b>a)</b><input type="radio" name="questao1" id="opcao_a" value="op_a">Serial Killer<br>
+            <b>b)</b><input type="radio" name="questao1" id="opcao_b" value="op_b">Jornada do Herói<br>
+            <b>c)</b><input type="radio" name="questao1" id="correta1" value="op_c">Plot twist<br>
+            <b>d)</b><input type="radio" name="questao1" id="opcao_d" value="op_d">Plano Sequência<br>
+            <b>e)</b><input type="radio" name="questao1" id="opcao_e" value="op_e">Amor clássico<br>
         </form>
 	</article>
 
@@ -212,11 +197,11 @@ ele se consolidou no mundo do cinema com uma técnica de direção que todos os 
 Brett, que esta no banco traseiro, até que Jules pergunta a Brett como que o Quarteirão com Queijo se chama na França, qual o nome do lanche em 
 francês e porque ele tem esse nome?</p>
         <form>
-            <input type="radio" name="questao2" id="opcao_a"><b>a)</b> Hamburger au Fromage, por conta da internacionalização do termo.<br>
-            <input type="radio" name="questao2" id="opcao_correta2"><b>b)</b> Royale with cheese, por conta de seu sistema métrico.<br>
-            <input type="radio" name="questao2" id="opcao_c"><b>c)</b> Cheeseburguer, eles não especificam os seus hamburgueres.<br>
-            <input type="radio" name="questao2" id="opcao_d"><b>d)</b> Cheesebloc, pois quarteirão em francês é bloc.<br>
-            <input type="radio" name="questao2" id="opcao_e"><b>e)</b> Quarter Pounder, eles não traduzem para o francês.<br>
+            <b>a)</b><input type="radio" name="questao2" id="opcao_a" value="op_a">Hamburger au Fromage, por conta da internacionalização do termo.<br>
+            <b>b)</b><input type="radio" name="questao2" id="correta2" value="op_b">Royale with cheese, por conta de seu sistema métrico.<br>
+            <b>c)</b><input type="radio" name="questao2" id="opcao_c" value="op_c">Cheeseburguer, eles não especificam os seus hamburgueres.<br>
+            <b>d)</b><input type="radio" name="questao2" id="opcao_d" value="op_d">Cheesebloc, pois quarteirão em francês é bloc.<br>
+            <b>e)</b><input type="radio" name="questao2" id="opcao_e" value="op_e">Quarter Pounder, eles não traduzem para o francês.<br>
         </form>
 	</article>
 
@@ -225,11 +210,11 @@ francês e porque ele tem esse nome?</p>
 		<p class="enunciado">Michael Bay é um famoso diretor que ficou mundialmente conhecido no mercado de Blockbusters a partir de suas produções "espetáculos", explosões
 e efeitos especiais, qual desses filmes não faz parte de sua franquia?</p>
         <form>
-            <input type="radio" name="questao3" id="opcao_a"><b>a)</b> Transformers<br>
-            <input type="radio" name="questao3" id="opcao_b"><b>b)</b> Uma Noite de Crime (The Purge)<br>
-            <input type="radio" name="questao3" id="opcao_c"><b>c)</b> Tartarugas Ninja<br>
-            <input type="radio" name="questao3" id="opcao_correta3"><b>d)</b> Círculo de Fogo<br>
-            <input type="radio" name="questao3" id="opcao_e"><b>e)</b> O Massacre da Serra Elétrica (2003 e 2006)<br>
+            <b>a)</b><input type="radio" name="questao3" id="opcao_a" value="op_a">Transformers<br>
+            <b>b)</b><input type="radio" name="questao3" id="opcao_b" value="op_b">Uma Noite de Crime (The Purge)<br>
+            <b>c)</b><input type="radio" name="questao3" id="opcao_c" value="op_c">Tartarugas Ninja<br>
+            <b>d)</b><input type="radio" name="questao3" id="correta3" value="op_d">Círculo de Fogo<br>
+            <b>e)</b><input type="radio" name="questao3" id="opcao_e" value="op_e">O Massacre da Serra Elétrica (2003 e 2006)<br>
         </form>
 	</article>
 
@@ -238,11 +223,11 @@ e efeitos especiais, qual desses filmes não faz parte de sua franquia?</p>
 		<p class="enunciado">Por incrível que pareça, o cenário cinematográfico brasileiro é repleto de arte e filmes renomados, com alguns até sendo indicados ao Oscar.
 Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         <form>
-            <input type="radio" name="questao4" id="opcao_a"><b>a)</b> Tropa de Elite<br>
-            <input type="radio" name="questao4" id="opcao_b"><b>b)</b> Aquarius<br>
-            <input type="radio" name="questao4" id="opcao_correta4"><b>c)</b> Cidade de Deus<br>
-            <input type="radio" name="questao4" id="opcao_d"><b>d)</b> Minha Mãe é Uma Peça<br>
-            <input type="radio" name="questao4" id="opcao_e"><b>e)</b> Que Horas Ela Volta<br>
+            <b>a)</b><input type="radio" name="questao4" id="opcao_a" value="op_a"><b>a)</b> Tropa de Elite<br>
+            <b>b)</b><input type="radio" name="questao4" id="opcao_b" value="op_b"><b>b)</b> Aquarius<br>
+            <b>c)</b><input type="radio" name="questao4" id="correta4" value="op_c"><b>c)</b> Cidade de Deus<br>
+            <b>d)</b><input type="radio" name="questao4" id="opcao_d" value="op_d"><b>d)</b> Minha Mãe é Uma Peça<br>
+            <b>e)</b><input type="radio" name="questao4" id="opcao_e" value="op_e"><b>e)</b> Que Horas Ela Volta<br>
         </form>
 	</article>
 
@@ -250,11 +235,11 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <p class="questão"><b>Questão 5 - Star Wars</b></p> <img src="starwars.gif" class="gifs">
                 <p class="enunciado">Em Star Wars, Luke Skywalker esta sempre acompanhado de 2 companheiros robóticos, quais os seus respectivos nomes? </p>
             <form>
-                <input type="radio" name="questao5" id="opcao_correta5"><b>a)</b> R2D2 e C3PO<br>
-                <input type="radio" name="questao5" id="opcao_b"><b>b)</b> R4D5 e RALL<br>
-                <input type="radio" name="questao5" id="opcao_c"><b>c)</b> TARS e C3PO<br>
-                <input type="radio" name="questao5" id="opcao_d"><b>d)</b> NANO e Julie<br>
-                <input type="radio" name="questao5" id="opcao_e"><b>e)</b> R2D1 e TARS<br>
+                <b>a)</b><input type="radio" name="questao5" id="correta5" value="op_a">R2D2 e C3PO<br>
+                <b>b)</b><input type="radio" name="questao5" id="opcao_b" value="op_b">R4D5 e RALL<br>
+                <b>c)</b><input type="radio" name="questao5" id="opcao_c" value="op_c">TARS e C3PO<br>
+                <b>d)</b><input type="radio" name="questao5" id="opcao_d" value="op_d">NANO e Julie<br>
+                <b>e)</b><input type="radio" name="questao5" id="opcao_e" value="op_e">R2D1 e TARS<br>
             </form>
         </article>
 
@@ -262,11 +247,11 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <p class="questão"><b>Questão 6 - História do Cinema</b></p> <img src="filme.gif" class="gifs">
                 <p class="enunciado">Em 28 de Dezembro de 1895, os Irmãos Lumiere iam mudar a história do mundo com o primeiro filme ja feito, qual era o nome desse filme? </p>
         <form>
-            <input type="radio" name="questao6" id="opcao_a"><b>a)</b> Uma Viagem à Lua<br>
-            <input type="radio" name="questao6" id="opcao_correta6"><b>b)</b> L'Arrivée d'un Train à La Ciotat <br>
-            <input type="radio" name="questao6" id="opcao_c"><b>c)</b> La Llegada del Tren al Paraíso.<br>
-            <input type="radio" name="questao6" id="opcao_d"><b>d)</b> A Chegada do Trem ao Paraíso.<br>
-            <input type="radio" name="questao6" id="opcao_e"><b>e)</b> La Belle Epoque<br>
+            <b>a)</b><input type="radio" name="questao6" id="opcao_a" value="op_a">Uma Viagem à Lua<br>
+            <b>b)</b><input type="radio" name="questao6" id="correta6" value="op_b">L'Arrivée d'un Train à La Ciotat <br>
+            <b>c)</b><input type="radio" name="questao6" id="opcao_c" value="op_c">La Llegada del Tren al Paraíso.<br>
+            <b>d)</b><input type="radio" name="questao6" id="opcao_d" value="op_d">A Chegada do Trem ao Paraíso.<br>
+            <b>e)</b><input type="radio" name="questao6" id="opcao_e" value="op_e">La Belle Epoque<br>
         </form>
         </article>
 
@@ -274,11 +259,11 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <p class="questão"><b>Questão 7 - Jim Carrey </b></p> <img src="truman.gif" class="gifs">
                 <p class="enunciado">Jim Carrey é um dos atores mais amados de Hollywood, porém, o que muita gente não sabe, é que alem de um grande repertório de comédia, ele também tem um enorme repertório de filmes com muita carga dramática, qual desses filmes não foi estrelado por ele? </p>
         <form>
-            <input type="radio" name="questao7" id="opcao_a"><b>a)</b> O Brilho Eterno de uma mente sem lembranças<br>
-            <input type="radio" name="questao7" id="opcao_b"><b>b)</b> O show de Truman<br>
-            <input type="radio" name="questao7" id="opcao_c"><b>c)</b> Ace Ventura<br>
-            <input type="radio" name="questao7" id="opcao_correta7"><b>d)</b> Click<br>
-            <input type="radio" name="questao7" id="opcao_e"><b>e)</b> O Maskara<br>
+            <b>a)</b><input type="radio" name="questao7" id="opcao_a" value="op_a">O Brilho Eterno de uma mente sem lembranças<br>
+            <b>a)</b><input type="radio" name="questao7" id="opcao_b" value="op_b">O show de Truman<br>
+            <b>a)</b><input type="radio" name="questao7" id="opcao_c" value="op_c">Ace Ventura<br>
+            <b>a)</b><input type="radio" name="questao7" id="correta8" value="op_d">Click<br>
+            <b>a)</b><input type="radio" name="questao7" id="opcao_e" value="op_e">O Maskara<br>
         </form>
         </article>
 
@@ -286,11 +271,11 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <p class="questão"><b>Questão 8 - Matrix</b></p> <img src="morpheus.gif" class="gifs">
                 <p class="enunciado">Em Matrix, Morpheus oferece a Neo duas pílulas; uma que vai levá-lo a "toca do coelho", e a outra que vai leva-lo de volta a sua vida normal, quais as cores das duas pílulas, respectivamente?</p>
         <form>
-            <input type="radio" name="questao8" id="opcao_a"><b>a)</b> Amarela e Roxa<br>
-            <input type="radio" name="questao8" id="opcao_b"><b>b)</b> Azul e Vermelha<br>
-            <input type="radio" name="questao8" id="opcao_c"><b>c)</b> Verde e Amarela<br>
-            <input type="radio" name="questao8" id="opcao_correta7"><b>d)</b> Vermelha e Azul<br>
-            <input type="radio" name="questao8" id="opcao_e"><b>e)</b> Verde e Azul<br>
+            <b>a)</b><input type="radio" name="questao8" id="opcao_a" value="op_a">Amarela e Roxa<br>
+            <b>b)</b><input type="radio" name="questao8" id="opcao_b" value="op_b">Azul e Vermelha<br>
+            <b>c)</b><input type="radio" name="questao8" id="opcao_c" value="op_c">Verde e Amarela<br>
+            <b>d)</b><input type="radio" name="questao8" id="correta8" value="op_c">Vermelha e Azul<br>
+            <b>e)</b><input type="radio" name="questao8" id="opcao_e" value="op_e">Verde e Azul<br>
         </form>
         </article>
 
@@ -298,11 +283,11 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <p class="questão"><b>Questão 9 - Oscar</b></p> <img src="oscar.gif" class="gifs">
                 <p class="enunciado">O Oscar é, sem dúvidas, a premiação mais famosa do cinema, nomeando grandes filmes a cada ano, qual foi o filme que mais levou estatuetas neste evento? </p>
         <form>
-            <input type="radio" name="questao9" id="opcao_a"><b>a)</b> Titanic (1997)<br>
-            <input type="radio" name="questao9" id="opcao_b"><b>b)</b> Ben Hur (1959)<br>
-            <input type="radio" name="questao9" id="opcao_correta9"><b>c)</b> Os Senhor dos Aneis: O Retorno do Rei (2003)<br>
-            <input type="radio" name="questao9" id="opcao_d"><b>d)</b> Amor, Sublime Amor (1961)<br>
-            <input type="radio" name="questao9" id="opcao_e"><b>e)</b> O Último Imperador (1987)<br>
+            <b>a)</b><input type="radio" name="questao9" id="opcao_a" value="op_a">Titanic (1997)<br>
+            <b>b)</b><input type="radio" name="questao9" id="opcao_b" value="op_b">Ben Hur (1959)<br>
+            <b>c)</b><input type="radio" name="questao9" id="correta9" value="op_c">Os Senhor dos Aneis: O Retorno do Rei (2003)<br>
+            <b>d)</b><input type="radio" name="questao9" id="opcao_d" value="op_d">Amor, Sublime Amor (1961)<br>
+            <b>e)</b><input type="radio" name="questao9" id="opcao_e" value="op_e">O Último Imperador (1987)<br>
         </form>
         </article>
 
@@ -310,14 +295,16 @@ Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
                 <p class="questão"><b>Questão 10 - Cinema Indiano</b></p>  <img src="bollywood.gif" class="gifs">
                 <p class="enunciado">A Índia é um dos países mais populosos do mundo, somando mais de 1 bilhão de habitantes, ela é tão grande e tão influente que tem sua própria indústria cinematográfica, qual o nome dela? </p>
         <form>
-            <input type="radio" name="questao10" id="opcao_correta10"><b>a)</b> Bollywood <br>
-            <input type="radio" name="questao10" id="opcao_b"><b>b)</b> Indiawood<br>
-            <input type="radio" name="questao10" id="opcao_c"><b>c)</b> Hajwood<br>
-            <input type="radio" name="questao10" id="opcao_d"><b>d)</b> Tajwood<br>
-            <input type="radio" name="questao10" id="opcao_e"><b>e)</b> Mohawood<br>
+            <b>a)</b><input type="radio" name="questao10" id="correta10" value="op_a"><b>a)</b> Bollywood <br>
+            <b>b)</b><input type="radio" name="questao10" id="opcao_b" value="op_b"><b>b)</b> Indiawood<br>
+            <b>c)</b><input type="radio" name="questao10" id="opcao_c" value="op_c"><b>c)</b> Hajwood<br>
+            <b>d)</b><input type="radio" name="questao10" id="opcao_d" value="op_d"><b>d)</b> Tajwood<br>
+            <b>e)</b><input type="radio" name="questao10" id="opcao_e" value="op_e"><b>e)</b> Mohawood<br>
         </form>
         </article>
-        <button onclick="somarResultado()" id="botao" class="botao">RESULTADO</button>
+        <form>
+        <button onclick="somarResultado()" id="botao" class="botao"><img src="resultado3.png"></button>
+        </form>
         <footer>
                 <p id="textofooter">Todos os direitos reservados © Juan Victor Dutra Juan - 2017</p>
         </footer>
