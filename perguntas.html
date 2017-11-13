@@ -33,12 +33,20 @@
                         right: 0;
                         box-shadow: 10px 10px 15px grey;
                         background-color: rgb(255,203,139);
+                        display: none;
                 }
                 body{
                         background-color: beige;
                 }
                 .questão{
+                        width: 550px;
                         font-style: bold;
+                        padding: 10px;
+                        border: 1px solid black;
+                        left: 385px;
+                        position: relative;
+                        right: 0;
+                        box-shadow: 10px 10px 15px grey;
                 }
                 .gifs{
                         height: 210px;
@@ -73,11 +81,54 @@
                         padding: 0;
                 }
         </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".questão").hover(function(){
+                $(this).css("background-color", "rgb(232,148,83)");
+            },
+            function(){
+                $(this).css("background-color", "rgb(255,255,255)");
+            });
+            $("#1").click(function(){
+                $("#a1").slideToggle("slow");
+            });
+            $("#2").click(function(){
+                $("#a2").slideToggle("slow");
+            });
+            $("#3").click(function(){
+                $("#a3").slideToggle("slow");
+            });
+            $("#4").click(function(){
+                $("#a4").slideToggle("slow");
+            });
+            $("#5").click(function(){
+                $("#a5").slideToggle("slow");
+            });
+            $("#6").click(function(){
+                $("#a6").slideToggle("slow");
+            });
+            $("#7").click(function(){
+                $("#a7").slideToggle("slow");
+            });
+            $("#8").click(function(){
+                $("#a8").slideToggle("slow");
+            });
+            $("#9").click(function(){
+                $("#a9").slideToggle("slow");
+            });
+            $("#10").click(function(){
+                $("#a10").slideToggle("slow");
+            });
+
+        });
+    </script>
 </head>
 <body name="quiz">
-	<img src="capa.png" id="capa2">   
-	<article>
-		<p class="questão"><b>Questão 1 - Shyamalan</b></p> <img src="shyamalan.gif" class="gifs">
+	<img src="capa.png" id="capa2">
+    <p class="questão" id="1"><b>Questão 1 - Shyamalan</b></p>    
+	<article id="a1">
+		<img src="shyamalan.gif" class="gifs">
 		<p class="enunciado">Shyamalan, diretor, tem um catálogo de filmes bem peculiares, surpreendentes e únicos como Fragmentado e O Sexto Sentido, ele se consolidou no mundo do cinema com uma técnica de direção que todos os seus filmes carregam, qual o nome dessa técnica?</p>
         <form>
             <b>a)</b><input type="radio" name="questao1" value="op_a">Serial Killer<br>
@@ -88,8 +139,9 @@
         </form>
 	</article>
 
-	<article>
-		<p class="questão"><b>Questão 2 - Pulp Fiction</b></p> <img src="pulpfiction.gif" class="gifs">
+    <p class="questão" id="2"><b>Questão 2 - Pulp Fiction</b>
+	<article id="a2">
+		</p> <img src="pulpfiction.gif" class="gifs">
 		<p class="enunciado">Em Pulp Fiction, de Quentin Tarantino, Vincent Vega (John Travolta) e Jules (Samuel L. Jackson) começam uma conversa sobre hambúrgueres com Brett, que esta no banco traseiro, até que Jules pergunta a Brett como que o Quarteirão com Queijo se chama na França, qual o nome do lanche em francês e porque ele tem esse nome?</p>
         <form>
             <b>a)</b><input type="radio" name="questao2" value="op_a">Hamburger au Fromage, por conta da internacionalização do termo.<br>
@@ -100,8 +152,9 @@
         </form>
 	</article>
 
-	<article>
-		<p class="questão"><b>Questão 3 - Michael Bay</b></p> <img src="transformers.gif" class="gifs">
+	<p class="questão" id="3"><b>Questão 3 - Michael Bay</b>
+    <article id="a3">
+		</p> <img src="transformers.gif" class="gifs">
 		<p class="enunciado">Michael Bay é um famoso diretor que ficou mundialmente conhecido no mercado de Blockbusters a partir de suas produções "espetáculos", explosões e efeitos especiais, qual desses filmes não faz parte de sua franquia?</p>
         <form>
             <b>a)</b><input type="radio" name="questao3" value="op_a">Transformers<br>
@@ -112,20 +165,22 @@
         </form>
 	</article>
 
-	<article>
-		<p class="questão"><b>Questão 4 - Cinema Brasileiro</b></p> <img src="cidade.gif" class="gifs">
+	<p class="questão" id="4"><b>Questão 4 - Cinema Brasileiro</b>
+    <article id="a4">
+		</p> <img src="cidade.gif" class="gifs">
 		<p class="enunciado">Por incrível que pareça, o cenário cinematográfico brasileiro é repleto de arte e filmes renomados, com alguns até sendo indicados ao Oscar. Qual flme brasileiro a seguir recebeu uma indicação ao Oscar?</p>
         <form>
-            <b>a)</b><input type="radio" name="questao4" value="op_a"><b>a)</b> Tropa de Elite<br>
-            <b>b)</b><input type="radio" name="questao4" value="op_b"><b>b)</b> Aquarius<br>
-            <b>c)</b><input type="radio" name="questao4" id="correta4" value="op_c"><b>c)</b> Cidade de Deus<br>
-            <b>d)</b><input type="radio" name="questao4" value="op_d"><b>d)</b> Minha Mãe é Uma Peça<br>
-            <b>e)</b><input type="radio" name="questao4" value="op_e"><b>e)</b> Que Horas Ela Volta<br>
+            <b>a)</b><input type="radio" name="questao4" value="op_a">Tropa de Elite<br>
+            <b>b)</b><input type="radio" name="questao4" value="op_b">Aquarius<br>
+            <b>c)</b><input type="radio" name="questao4" id="correta4" value="op_c">Cidade de Deus<br>
+            <b>d)</b><input type="radio" name="questao4" value="op_d">Minha Mãe é Uma Peça<br>
+            <b>e)</b><input type="radio" name="questao4" value="op_e">Que Horas Ela Volta<br>
         </form>
 	</article>
 
-        <article>
-                <p class="questão"><b>Questão 5 - Star Wars</b></p> <img src="starwars.gif" class="gifs">
+        <p class="questão" id="5"><b>Questão 5 - Star Wars</b>
+        <article id="a5">
+                </p> <img src="starwars.gif" class="gifs">
                 <p class="enunciado">Em Star Wars, Luke Skywalker esta sempre acompanhado de 2 companheiros robóticos, quais os seus respectivos nomes? </p>
             <form>
                 <b>a)</b><input type="radio" name="questao5" id="correta5" value="op_a">R2D2 e C3PO<br>
@@ -136,8 +191,9 @@
             </form>
         </article>
 
-        <article>
-                <p class="questão"><b>Questão 6 - História do Cinema</b></p> <img src="filme.gif" class="gifs">
+        <p class="questão" id="6"><b>Questão 6 - História do Cinema</b>
+        <article id="a6">
+                </p> <img src="filme.gif" class="gifs">
                 <p class="enunciado">Em 28 de Dezembro de 1895, os Irmãos Lumiere iam mudar a história do mundo com o primeiro filme ja feito, qual era o nome desse filme? </p>
         <form>
             <b>a)</b><input type="radio" name="questao6" value="op_a">Uma Viagem à Lua<br>
@@ -148,8 +204,9 @@
         </form>
         </article>
 
-        <article>
-                <p class="questão"><b>Questão 7 - Jim Carrey </b></p> <img src="truman.gif" class="gifs">
+        <p class="questão" id="7"><b>Questão 7 - Jim Carrey </b>
+        <article id="a7">
+                </p> <img src="truman.gif" class="gifs">
                 <p class="enunciado">Jim Carrey é um dos atores mais amados de Hollywood, porém, o que muita gente não sabe, é que alem de um grande repertório de comédia, ele também tem um enorme repertório de filmes com muita carga dramática, qual desses filmes não foi estrelado por ele?</p>
         <form>
             <b>a)</b><input type="radio" name="questao7" value="op_a">O Brilho Eterno de uma mente sem lembranças<br>
@@ -160,8 +217,9 @@
         </form>
         </article>
 
-        <article>
-                <p class="questão"><b>Questão 8 - Matrix</b></p> <img src="morpheus.gif" class="gifs">
+        <p class="questão" id="8"><b>Questão 8 - Matrix</b>
+        <article id="a8">
+                </p> <img src="morpheus.gif" class="gifs">
                 <p class="enunciado">Em Matrix, Morpheus oferece a Neo duas pílulas; uma que vai levá-lo a "toca do coelho", e a outra que vai leva-lo de volta a sua vida normal, quais as cores das duas pílulas, respectivamente?</p>
         <form>
             <b>a)</b><input type="radio" name="questao8" value="op_a">Amarela e Roxa<br>
@@ -172,8 +230,9 @@
         </form>
         </article>
 
-        <article>
-                <p class="questão"><b>Questão 9 - Oscar</b></p> <img src="oscar.gif" class="gifs">
+        <p class="questão" id="9"><b>Questão 9 - Oscar</b>
+        <article id="a9">
+                </p> <img src="oscar.gif" class="gifs">
                 <p class="enunciado">O Oscar é, sem dúvidas, a premiação mais famosa do cinema, nomeando grandes filmes a cada ano, qual foi o filme que mais levou estatuetas neste evento? </p>
         <form>
             <b>a)</b><input type="radio" name="questao9" value="op_a">Titanic (1997)<br>
@@ -184,8 +243,9 @@
         </form>
         </article>
 
-        <article>
-                <p class="questão"><b>Questão 10 - Cinema Indiano</b></p>  <img src="bollywood.gif" class="gifs">
+        <p class="questão" id="10"><b>Questão 10 - Cinema Indiano</b>
+        <article id="a10">
+                </p>  <img src="bollywood.gif" class="gifs">
                 <p class="enunciado">A Índia é um dos países mais populosos do mundo, somando mais de 1 bilhão de habitantes, ela é tão grande e tão influente que tem sua própria indústria cinematográfica, qual o nome dela? </p>
         <form>
             <b>a)</b><input type="radio" name="questao10" id="correta10" value="op_a"><b>a)</b> Bollywood <br>
