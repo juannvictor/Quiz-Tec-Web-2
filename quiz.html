@@ -21,8 +21,8 @@ html{
 	position: relative;
 	margin: 0px;
 	color: grey;
-	left: 28%;
-	width: 50%;
+	left: 20%;
+	width: 60%;
 }
 
 body{
@@ -58,7 +58,7 @@ body{
 }
 
 footer{
-	position: absolute;
+	position: relative;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -73,14 +73,18 @@ footer{
 	</style>
 	<meta charset="utf-8">
 	<title>Os Segredos do Cinema</title>
-	<script>
-		function clickStart(){
-			window.open("perguntas.html");
-		}
-		function clickAbout(){
-			alert("Você se considera um cinéfilo de verdade? Faça esse teste de 10 perguntas que testarão o seu conhecimento sobre a sétima arte!")
-		}
-		
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$("#botao1").click(function(){
+				window.open("perguntas.html");
+			});
+			$("#botao2").click(function(){
+				alert("Você se considera um cinéfilo de verdade? Faça esse teste de 10 perguntas que testarão o seu conhecimento sobre a sétima arte!");
+
+			});
+		});		
 	</script>
 </head>
 <body>
@@ -88,8 +92,8 @@ footer{
 	<img src="capa.png" id="capa">
 	<h2 id="legenda">O quiz que testa seus conhecimentos sobre a sétima arte.</h2>
 	<form>
-		<button value="botaoIniciar" onclick="clickStart()" id="botao1"><img src="botaoiniciar3.png" ></button>
-		<button value="botaoSobre" onclick="clickAbout()"  id="botao2"><img src="sobre3.png"></button>
+		<button value="botaoIniciar" id="botao1"><img src="botaoiniciar3.png" ></button>
+		<button value="botaoSobre" id="botao2"><img src="sobre3.png"></button>
 	</form>
 </section>
 <br>
